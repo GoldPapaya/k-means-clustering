@@ -1,1 +1,2 @@
 # k-means-clustering
+ATTRIBUTIONS: All sample data originates from Aeberhard, S. & Forina, M. (1992). Wine [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C5PC7J., and the adapted dataset used in this project is credited to https://www.kaggle.com/datasets/harrywang/wine-dataset-for-clustering. You may use the code in this repository freely for your own purposes as it falls under the MIT license, but you must provide attribution to the original dataset owners.
