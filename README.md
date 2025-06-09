@@ -18,3 +18,5 @@ After panning around in the interactive window, it is easy for a human to recogn
 <p align='center'>
   <img src="assets/k-means-iterative.gif" width='70%' height='70%'></img>
 </p>
+
+But this forgets the original purpose of performing k-means clustering in the first place. In the above scenario, we made an empirical observation that there were 3 clusters in the data, and then performed an iterative process that confirmed our observation. The most exciting applications of k-means clustering, however, is when computers are able to make these kinds of observations on their own. This is doubly true in cases with high dimensional data that is difficult to conceptualize.
