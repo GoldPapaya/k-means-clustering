@@ -11,5 +11,5 @@ After panning around in the interactive window, it is easy for a human to recogn
 
 
 <p align='center'>
-  <img src="assets/k-means-iterative.gif" width='60%' height='60%'></img>
+  <img src="assets/k-means-iterative.gif" width='70%' height='70%'></img>
 </p>
