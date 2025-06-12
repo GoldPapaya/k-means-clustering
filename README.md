@@ -19,4 +19,10 @@ After panning around in the interactive window, it is easy for a human to recogn
   <img src="assets/k-means-iterative.gif" width='70%' height='70%'></img>
 </p>
 
-But this forgets the original purpose of performing k-means clustering in the first place. In the above scenario, we made an empirical observation that there were 3 clusters in the data, and then performed an iterative process that confirmed our observation. The most exciting applications of k-means clustering, however, is when computers are able to make these kinds of observations on their own. This is doubly true in cases with high dimensional data that is difficult to conceptualize.
+But this forgets the original purpose of performing k-means clustering in the first place. In the above scenario, we made an empirical observation that there were 3 clusters in the data, and then performed an iterative process that confirmed our observation. The most exciting applications of k-means clustering, however, is when computers are able to make these kinds of observations on their own. This is doubly true in cases with high dimensional data that is difficult to conceptualize. Finding the appropriate number of clusters can be done in a number of different ways, such as via the Silhouette or the Gap Statistic method. But in this case, it is easy to just experiment by running the algorithm with varying numbers of clusters (centroids) in each simulation. Following this process yeilds the following graph below, which plots k value (x) against the Within Cluster Sum of Squares (WCSS) (y). With the elbow method, though inherently subjective, we observe that there are indeed 3 clusters present in the dataset.
+
+<p align='center'>
+  <img src="assets/elbow-curve.png" width='70%' height='70%'></img>
+</p>
+
+Deciding to use the PCA method for dimensionality reduction, 100 max k-means iterations, a tolerance threshold of 0.001, and the elbow method for finding the number of clusters, were all done within the context of this dataset and its properties. If this analysis is redoneusing other methods, there may be other revelations that can be gleaned from the data.
