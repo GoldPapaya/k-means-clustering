@@ -25,4 +25,4 @@ But this forgets the original purpose of performing k-means clustering in the fi
   <img src="assets/elbow-curve.png" width='70%' height='70%'></img>
 </p>
 
-Deciding to use the PCA method for dimensionality reduction, 100 max k-means iterations, a tolerance threshold of 0.001, and the elbow method for finding the number of clusters, were all done within the context of this dataset and its properties. If this analysis is redoneusing other methods, there may be other revelations that can be gleaned from the data.
+Deciding to use the PCA method for dimensionality reduction, 100 max k-means iterations, a tolerance threshold of 0.001, and the elbow method for finding the number of clusters, were all done within the context of this dataset and its properties. If this analysis is redone using other methods, there may be other revelations that can be gleaned from the data.
