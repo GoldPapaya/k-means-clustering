@@ -8,21 +8,21 @@ The first stage in k-means clustering is to first standardize all the data. A co
 After scaling all data, a choice needs to be made about which method to employ to carry out dimensionality reduction. The dataset has 13 features (dimensions), which needs to be reduced to 3. This is necessary for a number of reasons, most important being that the actual utility of a k-means cluster analysis deminishes as you increase the number of dimensions, due to the appropriately phrased <a href='https://en.wikipedia.org/wiki/Curse_of_dimensionality'>*Curse of Dimensionality*</a>. There are several methods that can reduce the number of dimensions in this dataset, but the <a href='https://en.wikipedia.org/wiki/Principal_component_analysis'>Principal Component Analysis (PCA)</a> method is especially painless and also intuitive in this case. This technique involves choosing the top n vectors responsible for the highest proportion of dataset variance, therefore minimizing information loss while lowering dataset dimensions to a desired level. These curated data can be plotted in a 3d graph, which will reveal a point cloud.
 
 <p align='center'>
-  <img src="assets/datacloud1.png" width='30%' height='30%'></img>
-  <img src="assets/datacloud0.png" width='30%' height='30%'></img>
+  <img src="assets/datacloud1.png" width='30%' height='300%'></img>
+  <img src="assets/datacloud0.png" width='30%' height='300%'></img>
 </p>
 
 After panning around in the interactive window, it is easy for a human to recognize that there are 3 clusters. But how do we guide a machine to the same understanding? Following k-means theory, we randomly generate 3 centroids to random (x,y,z) coordinates in the 3d graph, assign data points to each centroid by finding the nearest neighbor based on Euclidian distance, and then shifting the position of the centroid to the averaged location of all points assigned to it. This is done iteratively until the position of each centroid converges to the true center of a cluster in the point data. We know that we are finished iterating when either a predetermined number of iterations has been performed (I selected 100 as an upper limit just to be safe, but this is way overkill) or the amount of distance the centroid moves between iterations falls below a selected threshold (I chose 0.001 arbitrarily).
 
 
 <p align='center'>
-  <img src="assets/k-means-iterative.gif" width='70%' height='70%'></img>
+  <img src="assets/k-means-iterative.gif" width='70%' height='700%'></img>
 </p>
 
 But this forgets the original purpose of performing k-means clustering in the first place. In the above scenario, we made an empirical observation that there were 3 clusters in the data, and then performed an iterative process that confirmed our observation. The most exciting applications of k-means clustering, however, is when computers are able to make these kinds of observations on their own. This is doubly true in cases with high dimensional data that is difficult to conceptualize. Finding the appropriate number of clusters can be done in a number of different ways, such as via the Silhouette or the Gap Statistic method. But in this case, it is easy to just experiment by running the algorithm with varying numbers of clusters (centroids) in each simulation. Following this process yeilds the following graph below, which plots k value (x) against the Within Cluster Sum of Squares (WCSS) (y). With the elbow method, though inherently subjective, we observe that there are indeed 3 clusters present in the dataset.
 
 <p align='center'>
-  <img src="assets/elbow-curve.png" width='70%' height='70%'></img>
+  <img src="assets/elbow-curve.png" width='70%' height='700%'></img>
 </p>
 
 Deciding to use the PCA method for dimensionality reduction, 100 max k-means iterations, a tolerance threshold of 0.001, and the elbow method for finding the number of clusters, were all done within the context of this dataset and its properties. If this analysis is redone using other methods, there may be other revelations that can be gleaned from the data.
